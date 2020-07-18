@@ -1,0 +1,35 @@
+<h3>Add New Disease</h3>
+<form method = "POST" action ="/disease/add">
+    <input type = "text" name = "name" placeholder= "Name" >
+    <input type = "submit" value = "Submit">
+</form>
+
+
+<h3>Add New Treatment</h3>
+<form method = "POST" action ="/treatment/add">
+    <input type = "text" name = "name" placeholder= "Name" >
+    <input type = "submit" value = "Submit">
+</form>
+
+<h3>Add Relationship Between Disease and Treatment</h3>
+<form method = "POST" action ="/relationship/add">
+    <input type = "text" name = "name1" placeholder= "Disease Name" >
+    <input type = "text" name = "name2" placeholder= "Treatment Name" >
+    <input type = "submit" value = "Submit">
+</form>
+
+
+<h3> Disease</h3>
+<ul>
+    <% disease.forEach(function(disease){ %>
+        <li><a href = "/disease/<%= disease.id %>"><%= disease.name %></a></li>
+    <% }) %>
+</ul>
+
+
+<h3> Treatment</h3>
+<ul>
+    <% treatment.forEach(function(treatment){ %>
+        <li><a href = "/treatment/<%= treatment.id %>"><%= treatment.name %></a></li>
+    <% }) %>
+</ul>

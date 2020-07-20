@@ -1,3 +1,6 @@
+<% include ../views/partials/header %>
+
+
 <h3>Add New Disease</h3>
 <form method = "POST" action ="/disease/add">
     <input type = "text" name = "name" placeholder= "Name" >
@@ -20,16 +23,22 @@
 
 
 <h3> Disease</h3>
-<ul>
+<div class="row">
     <% disease.forEach(function(disease){ %>
-        <li><a href = "/disease/<%= disease.id %>"><%= disease.name %></a></li>
+        <div class="col-md-2">
+            <div class="well well-lg"><i class="fa fa-stethoscope" style="font-size:26px"></i><a href = "/disease/<%= disease.id %>" class="btn btn-info" role="button"><%= disease.name %></a></div>
+        </div>
     <% }) %>
-</ul>
+</div>
+</br></br>
 
 
 <h3> Treatment</h3>
-<ul>
+<div class="row">
     <% treatment.forEach(function(treatment){ %>
-        <li><a href = "/treatment/<%= treatment.id %>"><%= treatment.name %></a></li>
+        <div class="col-md-2">
+            <div class="well well-lg"><i class='fas fa-band-aid' style='font-size:24px'></i><a href = "/treatment/<%= treatment.id %>" class="btn btn-info"><%= treatment.name %></a></div>
+        </div>
     <% }) %>
-</ul>
+</div>
+<% include ../views/partials/footer %>

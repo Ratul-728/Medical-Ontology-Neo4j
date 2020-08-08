@@ -18,11 +18,21 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Add Disease</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Add Treatment</a>
+                
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                      <a class="dropdown-item" href="/add">Add Diseases</a>
+                      <a class="dropdown-item" href="/addT">Add Treatments</a>
+                      <a class="dropdown-item" href="/addS">Add Symtoms</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add Relationship Between</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                      <a class="dropdown-item" href="/addRT">Disease and Treatment</a>
+                      <a class="dropdown-item" href="/addRS">Disease and Symtom</a>
+                    </div>
                   </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact with us</a>

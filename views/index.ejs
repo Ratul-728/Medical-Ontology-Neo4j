@@ -1,27 +1,6 @@
 <% include ../views/partials/header %>
 
 
-<h3>Add New Disease</h3>
-<form method = "POST" action ="/disease/add">
-    <input type = "text" name = "name" placeholder= "Name" >
-    <input type = "submit" value = "Submit">
-</form>
-
-
-<h3>Add New Treatment</h3>
-<form method = "POST" action ="/treatment/add">
-    <input type = "text" name = "name" placeholder= "Name" >
-    <input type = "submit" value = "Submit">
-</form>
-
-<h3>Add Relationship Between Disease and Treatment</h3>
-<form method = "POST" action ="/relationship/add">
-    <input type = "text" name = "name1" placeholder= "Disease Name" >
-    <input type = "text" name = "name2" placeholder= "Treatment Name" >
-    <input type = "submit" value = "Submit">
-</form>
-
-
 <h3> Disease</h3>
 <div class="row">
     <% disease.forEach(function(disease){ %>
@@ -41,4 +20,14 @@
         </div>
     <% }) %>
 </div>
+
+<h3> Symtom</h3>
+<div class="row">
+    <% symtom.forEach(function(symtom){ %>
+        <div class="col-md-2">
+            <div class="well well-lg"><i class='fas fa-band-aid' style='font-size:24px'></i><a href = "/symtom/<%= symtom.id %>" class="btn btn-info"><%= symtom.name %></a></div>
+        </div>
+    <% }) %>
+</div>
+
 <% include ../views/partials/footer %>
